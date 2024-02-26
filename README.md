@@ -25,6 +25,7 @@ Make sure to include these dependencies in your project if you plan to extend or
 
 Demo
 You can view a live demo of the admin dashboard template here.
+https://naveensakthi1999.github.io/speedometer-dashboard/
 
 Contributing
 Contributions are welcome! If you'd like to contribute to this project, please fork the repository and submit a pull request with your changes.
