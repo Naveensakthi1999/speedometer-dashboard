@@ -14,7 +14,7 @@ To use this template, simply clone the repository to your local machine and open
 
 bash
 Copy code
-git clone https://github.com/your-username/admin-dashboard-template.git
+git clone [https://github.com/your-username/admin-dashboard-template.git](https://github.com/Naveensakthi1999/speedometer-dashboard.git)
 Dependencies
 This template relies on the following libraries and frameworks:
 
