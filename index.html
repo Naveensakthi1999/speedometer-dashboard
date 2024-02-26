@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />  
+<nav class="sidebar">
+      <header>
+        <div class="image-text">
+          <span class="image">
+            <img src="https://t4.ftcdn.net/jpg/04/06/91/91/240_F_406919147_D3WsGjwXj1qmFNrei2ZFvBWwiueRcFmg.jpg" alt="logo" />
+          </span>
+          <div class="text header-text">
+            <span class="main">Sidebar</span>
+            <span class="sub">Component</span>
+          </div>
+        </div>
+        <!-- <i class="bx bx-chevron-right toggle"></i> -->
+      </header>
+
+      <div class="menu-bar">
+        <div class="menu">
+          <ul class="menu-links">
+            <li class="search-bar">
+              <i class="bx bx-search icons"></i>
+              <input type="search" placeholder="Search..." />
+            </li>
+            <li class="nav-link">
+              <a href="#">
+                <i class="bx bx-home-alt icons"></i>
+                <span class="text nav-text">Dashboard</span>
+              </a>
+            </li>
+            <li class="nav-link">
+              <a href="#">
+                <i class="bx bx-bar-chart-alt-2 icons"></i>
+                <span class="text nav-text">Revenue</span>
+              </a>
+            </li>
+            <li class="nav-link">
+              <a href="#">
+                <i class="bx bx-bell icons"></i>
+                <span class="text nav-text">Notifications</span>
+              </a>
+            </li>
+            <li class="nav-link">
+              <a href="#">
+                <i class="bx bx-pie-chart-alt icons"></i>
+                <span class="text nav-text">Analytics</span>
+              </a>
+            </li>
+            <li class="nav-link">
+              <a href="#">
+                <i class="bx bx-heart icons"></i>
+                <span class="text nav-text">Likes</span>
+              </a>
+            </li>
+            <li class="nav-link">
+              <a href="#">
+                <i class="bx bx-wallet-alt icons"></i>
+                <span class="text nav-text">Wallets</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bottom-content">
+          <li class="nav-link">
+            <a href="#">
+              <i class="bx bx-log-out icons"></i>
+              <span class="text nav-text">Log Out</span>
+            </a>
+          </li>
+          <li class="mode">
+            <div class="moon-sun">
+              <i class="bx bx-moon icons moon"></i>
+              <i class="bx bx-sun icons sun"></i>
+            </div>
+            <span class="mode-text text">Dark Mode</span>
+            <div class="toggle-switch">
+              <span class="switch"></span>
+            </div>
+          </li>
+        </div>
+      </div>
+    </nav>
+<div class="container">
+<div class="card-body">
+<div class="row">
+<div class="col-sm-3">
+<h5 class="font-weight-bold"><i class="fa fa-tachometer" aria-hidden="true"></i>Gauge</h5>
+
+<a href="javascript:void(0)" id="buttonStatus">
+  <img src="image/off-button.png" id="buttonimage" data-value="1" style="width: 20%;">
+</a>
+
+<div id="container" style="height: 290px;"></div>
+</div>
+<div class="col-sm-3">
+<h5 class="font-weight-bold"><i class="fa fa-arrows" aria-hidden="true"></i>Direction</h5>
+<div class="row">
+<div class="col-sm-6 col-xs-6">
+<a href="javascript:void(0)" id="leftArrow">
+  <img src="image/left-arrow-gray.png" class="center" style="width: 50%;padding: 10px;">
+</a>
+<div id="leftText">
+<h1 class="triangle-lable" style="color: gray;">L</h1>
+</div>
+</div>
+<div class="col-sm-6 col-xs-6">
+<a href="javascript:void(0)" id="rightArrow">
+<img src="image/right-arrow-red.png" class="center" style="width: 50%;padding: 10px;">
+</a>
+<div id="rightText">
+<h1 class="triangle-lable" id="rightText" >R</h1>
+</div>
+</div>
+</div>
+<h5 class="font-weight-bold"><i class="fa fa-snowflake-o" aria-hidden="true"></i>Neutron</h5>
+<div style="display: flex;justify-content: center;">
+<div class="ring">
+  <div class="speed">
+    <div class="number">0.0</div>
+    <div class="units" style=";">CPS</div>
+  </div>
+</div>
+</div>
+</div>
+<div class="col-sm-6">
+<h5 class="font-weight-bold"><i class="fa fa-map-marker" aria-hidden="true"></i>GPS</h5>
+<div class="row">
+<div class="col-sm-6">
+<div class="label-name">
+<strong class="label-strong">Lat</strong>
+</div>
+<h3><i class="fa fa-cog" aria-hidden="true"></i>Set Up</h3>
+<div class="GPS-Details">
+<div style="padding: 15px;line-height: 1;">
+<label>Library</label>
+<p>ANSI_NAL</p> 
+<label>Paired</label>
+<p>VMACA12-G(19014332415)</p> 
+<p>VMACA12-G(19014332415)</p>
+<label>Alarm Mode</label>
+<p>FIXED</p> 
+</div> 
+</div>
+</div>
+<div class="col-sm-6">
+<div class="label-name">
+<strong class="label-strong">Lng</strong>
+</div>
+<h3><i class="fa fa-recycle" aria-hidden="true"></i>Alarm Status</h3>
+<div class="GPS-Details">
+<img src="image/nuclear-energy.png" class="center" style="width: 55%;padding: 20px;">
+<h3 style="margin-top: 0px;text-align: center;padding-bottom: 10px;">ID. Started</h3>
+</div>
+</div>
+</div>
+</div>
+<div class="col-sm-12">
+<h3 style="margin-top: 0px;"><i class="fa fa-clock-o" aria-hidden="true"></i>Recent Count Activity</h3>
+<div id="chartContainer" style="height: 370px; width:100%;"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<style type="text/css">
+.highcharts-credits{
+    display: none;
+}
+.triangle-lable{
+    text-align: center;
+}
+.triangle-left,
+.triangle-right{
+  width: 0;
+  height: 0;
+  margin: 30px auto;
+}
+.triangle-left,
+.triangle-right{
+  border-top:
+    18px solid transparent;
+  border-bottom:
+    18px solid transparent;
+  
+  
+}
+.triangle-right{
+  border-left:
+    30px solid red;
+}
+.triangle-left{
+  border-right:
+    30px solid gray;
+}
+.font-weight-bold{
+    font-weight: 700;
+}
+.ring {
+  position: relative;
+  --pointerleft: 11%;
+  --pointertop: 11%;
+  --pointerdeg: -45deg;
+  width: 100px;
+  height: 100px;
+  background-image: radial-gradient(red 0, red 50%, transparent 50%, transparent 100%), radial-gradient(green 0, green 50%, transparent 50%, transparent 100%), radial-gradient(white 0, white 60%, transparent 60%), conic-gradient(orange 0, green 130deg, white 130deg, white 230deg, red 230deg, orange 360deg);
+  background-size: 11% 11%, 11% 11%, 100% 100%, 100% 100%;
+  background-repeat: no-repeat;
+  background-position: 9.2% 82.3%, 90.8% 82.3%, center center, center center;
+  border-radius: 50%;
+  border-style: none;
+}
+
+.ring::after {
+  position: absolute;
+  content: '';
+  width: 5%;
+  height: 15%;
+  left: var(--pointerleft);
+  top: var(--pointertop);
+  transform: rotate(var(--pointerdeg));
+  border-style: solid;
+  border-width: 0.5vmin;
+  border-radius: 2vmin;
+  background-color: white;
+}
+
+.speed {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  text-align: center;
+  color: gray;
+}
+
+.speed .number {
+  font-size: 22px;
+}
+
+.speed .units {
+  font-size: 22px;
+}
+ 
+.label-name{
+    font-size: 22px;
+    text-align: left;
+    background-color: gray;
+    border-radius: 5px;
+}
+.label-strong{
+   padding: 10px;
+   color: #ffffff;
+}
+.GPS-Details{
+    background-color: gray;
+    color: white;
+    border-radius: 5px;
+}
+p {
+    margin-left: 18px;
+}
+i {
+    margin-right: 10px;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.canvasjs-chart-credit{
+  display: none;
+}
+.highcharts-exporting-group{
+  display: none;
+}
+
+input[type="checkbox"] {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: red;
+  outline: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  box-shadow: inset 0 0 5px rgb(0 0 0 / 50%);
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #000000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+
+input[type="checkbox"]:checked::before {
+  transform: translateX(100%);
+  background: #000000;
+}
+
+input[type="checkbox"]:checked {
+  background: #00ed64;
+}
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-more.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<script src="https://cdn.canvasjs.com/canvasjs.min.js"></script> 
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script type="text/javascript">
+$(function () {
+  $("#container").highcharts(
+    {
+      chart: {
+        type: "gauge"
+      },
+
+      title: {
+        text: 'Gauge-meter'
+      },
+
+      pane: {
+        startAngle: -90,
+        endAngle: 90,
+        background: null
+      },
+
+      // the value axis
+      yAxis: {
+        min: 0,
+        max: 200,
+
+        minorTickInterval: "auto",
+        minorTickWidth: 1,
+        minorTickLength: 10,
+        minorTickPosition: "inside",
+        minorTickColor: "#666",
+
+        tickPixelInterval: 40,
+        tickWidth: 2,
+        tickPosition: "inside",
+        tickLength: 10,
+        tickColor: "#666",
+        labels: {
+          step: 2,
+          formatter: function () {
+            if (this.value === 10) return '0';
+            if (this.value === 50) return '100n';
+            if (this.value === 100) return '1 µ';
+            if (this.value === 150) return '10 µ';
+            if (this.value === 200) return '100 µ';
+            return this.value;
+          },
+          rotation: "auto"
+        },
+        title: {
+          text: "urem/h"
+        },
+        plotBands: [
+          {
+            from: 0,
+            to: 120,
+            color: "#DF5353" 
+          },
+          {
+            from: 120,
+            to: 160,
+          },
+          {
+            from: 160,
+            to: 200,
+          },
+        ]
+      },
+
+      series: [
+        {
+          name: "Pressure",
+          data: [80],
+          tooltip: {
+            valueSuffix: " urem/h"
+          },
+          dataLabels: {
+            format: '<div style="text-align:center"><span style="font-size:25px;color:black">{y}</span><br/><span style="font-size:12px;color:silver">urem/h</span></div>'
+          }
+        }
+      ]
+    },
+    // Add some life
+    function (chart) {
+      if (!chart.renderer.forExport) {
+        setInterval(function () {
+          var point = chart.series[0].points[0],
+            newVal,
+            inc = Math.round((Math.random() - 0.5) * 20);
+
+          newVal = point.y + inc;
+          if (newVal < 0 || newVal > 200) {
+            newVal = point.y - inc;
+          }
+
+          point.update(newVal);
+        }, 3000);
+      }
+    }
+  );
+});
+
+window.onload = function () {
+
+var dps = [];
+var chart = new CanvasJS.Chart("chartContainer", {
+  exportEnabled: true,
+  title :{
+    text: ""
+  },
+  data: [{
+    type: "spline",
+    markerSize: 0,
+    dataPoints: dps 
+  }]
+});
+
+var xVal = 0;
+var yVal = 100;
+var updateInterval = 1000;
+var dataLength = 50; // number of dataPoints visible at any point
+
+var updateChart = function (count) {
+  count = count || 1;
+  // count is number of times loop runs to generate random dataPoints.
+  for (var j = 0; j < count; j++) { 
+    yVal = yVal + Math.round(5 + Math.random() *(-5-5));
+    dps.push({
+      x: xVal,
+      y: yVal
+    });
+    xVal++;
+  }
+  if (dps.length > dataLength) {
+    dps.shift();
+  }
+  chart.render();
+};
+
+updateChart(dataLength); 
+setInterval(function(){ updateChart() }, updateInterval); 
+
+}
+</script>
+</body>
+</html>
+<script type="text/javascript">
+
+  $("#leftArrow").click(function(e){
+    e.preventDefault();
+    $("#leftArrow").html('<img src="image/left-arrow-red.png" class="center" style="width: 60%;padding: 10px;">');
+    $("#rightArrow").html('<img src="image/right-arrow-gray.png" class="center" style="width: 60%;padding: 10px;">');
+    $("#leftText").html('<h1 class="triangle-lable">L</h1>');
+    $("#rightText").html('<h1 class="triangle-lable" style="color: gray;">R</h1>');
+    
+    $.ajax({
+          type: "POST",
+          url: "direction_update.php",
+          dataType:'json',
+          data : { left : '1', right : '0' },
+          success: function(result) {
+            if(result.op==1){
+              console.log("Successfully Saved !");
+              Swal.fire("Direction Change !");
+            }
+            else{
+              alert($("#msg").html(result.op));
+            }
+          },error:function(xhr,status,error){
+            console.log(JSON.stringify(xhr,status,error));
+          }
+      });
+
+  });
+
+  $("#rightArrow").click(function(e){
+    e.preventDefault();
+    $("#leftArrow").html('<img src="image/left-arrow-gray.png" class="center" style="width: 60%;padding: 10px;">');
+    $("#rightArrow").html('<img src="image/right-arrow-red.png" class="center" style="width: 60%;padding: 10px;">');
+    $("#leftText").html('<h1 class="triangle-lable" style="color: gray;">L</h1>');
+    $("#rightText").html('<h1 class="triangle-lable">R</h1>');
+
+    $.ajax({
+          type: "POST",
+          url: "direction_update.php",
+          dataType:'json',
+          data : { left : '0', right : '1' },
+          success: function(result) {
+            if(result.op==1){
+              console.log("Successfully Saved !");
+              Swal.fire("Direction Change !");
+            }
+            else{
+              alert($("#msg").html(result.op));
+            }
+          },error:function(xhr,status,error){
+            console.log(JSON.stringify(xhr,status,error));
+          }
+      });
+
+  });
+
+ $("#buttonStatus").click(function(e){
+    e.preventDefault();
+
+    var dataValue = $('#buttonimage').data('value');
+    if (dataValue == '1') {
+    $("#buttonStatus").html('<img src="image/no-button.png" id="buttonimage" data-value="0" style="width: 20%;">');
+    Swal.fire("Meter NO !");
+    } else {
+    $("#buttonStatus").html('<img src="image/off-button.png" id="buttonimage" data-value="1" style="width: 20%;">');
+    Swal.fire("Meter OFF !");
+    }
+    $.ajax({
+          type: "POST",
+          url: "speedometer_update.php",
+          dataType:'json',
+          data : { button_status : dataValue },
+          success: function(result) {
+            if(result.op==1){
+              console.log("Successfully Saved !");
+            }
+            else{
+              alert($("#msg").html(result.op));
+            }
+          },error:function(xhr,status,error){
+            console.log(JSON.stringify(xhr,status,error));
+          }
+      });
+    
+  });
+
+$.ajax({
+    type: "POST",
+    url: "database_data.php",
+    dataType:'json',
+    data: '',
+    success: function(result) {
+
+    if (result.left_direction == '1') {
+      $("#leftArrow").html('<img src="image/left-arrow-red.png" class="center" style="width: 60%;padding: 10px;">');
+      $("#rightArrow").html('<img src="image/right-arrow-gray.png" class="center" style="width: 60%;padding: 10px;">');
+      $("#leftText").html('<h1 class="triangle-lable">L</h1>');
+      $("#rightText").html('<h1 class="triangle-lable" style="color: gray;">R</h1>');
+    }
+
+    if (result.right_direction == '1') {
+      $("#leftArrow").html('<img src="image/left-arrow-gray.png" class="center" style="width: 60%;padding: 10px;">');
+      $("#rightArrow").html('<img src="image/right-arrow-red.png" class="center" style="width: 60%;padding: 10px;">');
+      $("#leftText").html('<h1 class="triangle-lable" style="color: gray;">L</h1>');
+      $("#rightText").html('<h1 class="triangle-lable">R</h1>');
+    }
+   
+    if (result.speedometer == '1') {
+      $("#buttonStatus").html('<img src="image/no-button.png" id="buttonimage" data-value="0" style="width: 20%;">');
+    } else {
+      $("#buttonStatus").html('<img src="image/off-button.png" id="buttonimage" data-value="1" style="width: 20%;">');
+    }
+
+    },error:function(xhr,status,error){
+      console.log(JSON.stringify(xhr,status,error));
+    }
+  }); 
+</script>
